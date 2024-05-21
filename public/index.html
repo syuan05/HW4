@@ -1,13 +1,32 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>油品選擇</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
-
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
+<div class="select-container">
+    <select id="fuel-select" onchange="fetchPrices(this.value)">
+        <option value="">選擇油品</option>
+        <option value="92">92</option>
+        <option value="95">95</option>
+        <option value="98">98</option>
+        <option value="diesel">柴油</option>
+    </select>
+</div>
 
+<div class="date-range-container">
+    <label for="start-date">起始日期：</label>
+    <input type="text" id="start-date" name="start-date" placeholder="0000-00-00">
+    <label for="end-date">結束日期：</label>
+    <input type="text" id="end-date" name="end-date" placeholder="0000-00-00">
+    <button onclick="fetchPricesByDateRange()">查詢</button>
+</div>
+
+<div id="table-container"></div>
+
+<script src="/scripts/scripts.js"></script>
+</body>
 </html>

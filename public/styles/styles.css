@@ -1,0 +1,38 @@
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #ddd;
+}
+#prices-table {
+    margin-top: 20px;
+    width: 60%; /* 調整寬度 */
+    border-collapse: collapse;
+    margin-left: auto; /* 中心對齊 */
+    margin-right: auto; /* 中心對齊 */
+}
+#prices-table {
+    margin-top: 20px;
+    width: 50%; /* 進一步縮小表格寬度 */
+    border-collapse: collapse;
+    margin-left: 0; /* 將左邊距設置為0 */
+    margin-right: auto;
+    table-layout: fixed; /* 固定寬度表格布局 */
+}
+#prices-table th, #prices-table td {
+    border: 1px solid #ccc;
+    padding: 6px; /* 調整填充 */
+    text-align: center;
+    width: 50%; /* 使兩列寬度一致 */
+}
